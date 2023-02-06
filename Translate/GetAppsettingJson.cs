@@ -9,6 +9,12 @@ namespace Translate
 {
     internal class GetAppsettingJson
     {
+        private readonly DateTime utcStart = new(1970, 1, 1);
+        /// <summary>
+        /// 获取配置文件
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
         public string GetKey(string key)
         {
             var builder = new ConfigurationBuilder()
@@ -17,7 +23,10 @@ namespace Translate
             IConfigurationRoot configuration = builder.Build();
             return configuration[key];
         }
-
+        /// <summary>
+        /// 获取随机User-Agent
+        /// </summary>
+        /// <returns></returns>
         public string GetuseAge()
         {
             string[] ua = new string[]
@@ -29,6 +38,15 @@ namespace Translate
             Random r = new();
             int n = r.Next(0, ua.Length - 1);
             return ua[n];
+        }
+        /// <summary>
+        /// 获取时间戳
+        /// </summary>
+        /// <returns></returns>
+        public ulong GetUTCStartMilliseconds()
+        {
+            TimeSpan ts = DateTime.UtcNow - utcStart;
+            return (ulong)ts.TotalMilliseconds;
         }
     }
 }

@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }))
 app.post('/regSign', async (req, res) => {
     const data = req.body
     try {
-        const string = sign.get_sign(data.Messages)
+        const string = sign.sign(data.Messages)
         console.log(string)
         res.json(string)
     } catch (e) {

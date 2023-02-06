@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -13,7 +14,14 @@ namespace Translate
     /// </summary>
     internal class MicrosoftTranslate
     {
-        GetAppsettingJson getAppsettingJson=new();
+        GetAppsettingJson getAppsettingJson = new();
+
+        public MicrosoftTranslate()
+        {
+            ServicePointManager.Expect100Continue = true;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
+            ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, errors) => true;
+        }
 
         #region bing
         /// <summary>
@@ -93,7 +101,7 @@ namespace Translate
         #endregion
 
         #region Microsoft
-        public async Task<string> EdgmicrosoftresultAsync(string text, string fromLang = "", string to = "zh-CHS")
+        public async Task<string> GetMicrosoftTranslateAsync(string text, string fromLang = "", string to = "zh-CHS")
         {
             try
             {
