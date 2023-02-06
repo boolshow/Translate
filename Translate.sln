@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Translate", "Translate\Translate.csproj", "{605B2801-A852-4280-AC1B-6330C1553150}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodejsSignTKApi", "NodejsSignTKApi\NodejsSignTKApi.njsproj", "{845FD75E-B96B-4C1A-B03F-1B7E8EEEA240}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{605B2801-A852-4280-AC1B-6330C1553150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{605B2801-A852-4280-AC1B-6330C1553150}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{605B2801-A852-4280-AC1B-6330C1553150}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{605B2801-A852-4280-AC1B-6330C1553150}.Release|Any CPU.Build.0 = Release|Any CPU
+		{845FD75E-B96B-4C1A-B03F-1B7E8EEEA240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{845FD75E-B96B-4C1A-B03F-1B7E8EEEA240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{845FD75E-B96B-4C1A-B03F-1B7E8EEEA240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{845FD75E-B96B-4C1A-B03F-1B7E8EEEA240}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE86EC69-FB1C-4C25-91D9-A1FFCB6283D6}
+	EndGlobalSection
+EndGlobal
